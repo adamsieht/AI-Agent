@@ -6,7 +6,7 @@ Follow these steps to install the webapp locally:
 
 ### Clone the Repository:
 ```
-git clone https://github.com/your-username/your-repo-name.git
+git clone https://github.com/adamsieht/AI-Agent
 cd your-repo-name
 ```
 ### Create a virtual environment:
