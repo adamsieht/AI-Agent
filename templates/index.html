@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Chat</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+
+  <!-- Sidebar with previous conversations -->
+  <div class="sidebar">
+    <div class="sidebar-header">
+        <h3>Conversations</h3>
+      <button class="new-chat-btn" onclick="newChat()">New Chat</button>
+
+    </div>
+    <div class="conversation-list" id="conversation-list">
+      <!-- Dynamic conversation items will be added here -->
+    </div>
+  </div>
+
+  <!-- Main Content Area -->
+  <div class="main-content">
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <div class="profile-dropdown">
+        <button class="profile-btn" onclick="toggleDropdown()">&#x25BC;</button>
+        <div class="dropdown-content" id="dropdown-content">
+            <a href="/admin">Profile</a>
+            <a href="#">Settings</a>
+            <a href="#">Logout</a>
+        </div>
+        </div>
+    </div>
+    
+    <!-- Model Name Header -->
+    <div class="agent-name" id="agent-name" onclick="fetchAgents()">
+        <h3 id="agent-name-header">Loading agent...</h3>
+    </div>
+    
+    <!-- (Optionally, a container for the other agents that is hidden until the model name is clicked) -->
+    <div class="agents-container" id="agents-container">
+        <!-- Agents will be populated here -->
+        <p>todo- agents list</p>
+    </div>
+
+    <!-- Chat Wrapper -->
+    <div class="chat-wrapper">
+      <div class="chat-window" id="chat-window">
+        <!-- Chat messages will be dynamically appended here -->
+      </div>
+      <div class="chat-input-area">
+        <input type="text" id="chat-input" placeholder="Type your message here..." onkeypress="handleKeyPress(event)" />
+        <button onclick="sendMessage()">Send</button>
+      </div>
+    </div>
+  </div>
+  <script src="/static/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</body>
+</html>
