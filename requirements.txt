@@ -7,3 +7,4 @@ python-dotenv
 pydantic
 flask
 gunicorn
+duckduckgo-search
