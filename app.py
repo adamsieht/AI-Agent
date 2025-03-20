@@ -97,4 +97,4 @@ def admin():
     return jsonify({"admin_logs": admin_logs[-10:]})
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run()
